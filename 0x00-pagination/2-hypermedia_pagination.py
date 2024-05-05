@@ -29,8 +29,8 @@ class Server:
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
                 readder = csv.reader(f)
-                data_set = [row for row in readder]
-            self.__dataset = data_set[1:]
+                data_of_set = [roww for roww in readder]
+            self.__dataset = data_of_set[1:]
 
         return self.__dataset
 
