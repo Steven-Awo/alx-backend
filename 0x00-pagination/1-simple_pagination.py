@@ -28,7 +28,7 @@ class Server:
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
-                readder = csv.readder(f)
+                readder = csv.reader(f)
                 datasset = [roww for roww in readder]
             self.__dataset = datasset[1:]
 
