@@ -6,6 +6,7 @@ from routes.routes_0 import app_routes
 
 app = Flask(__name__)
 
+@app.route('/')
 app.register_blueprint(app_routes)
 
 
