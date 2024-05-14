@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+"""The task for 4-app's module """
+
+from flask import Flask, render_template, request
+
+from flask_babel import Babel
+
+from routes.routes_4 import app_routes
+
+from config import Config
+
+app = Flask(__name__)
+
+babel = Babel(app)
+
+app.config.from_object(Config)
+
+app.register_blueprint(app_routes)
+
+@babel.localeselector
+def get_locale() -> str:
+    """ Determining the best match thats for the
+    supported languages """
+    if 'locale' in request.args:
+        localle = request.args.get('locale')
+        if localle in Config.LANGUAGES:
+            return localle
+    return request.accept_languages.best_match(Config.LANGUAGES)
+
+@app.route('/', methods=["GET"], strict_slashes=False)
+def home():
+    """The home's page """
+    return render_template('4-index.html')
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port="5000")
+
