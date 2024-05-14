@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" 1-app module """
+"""The task for 1-app's module """
 from flask import Flask
 
 from flask_babel import Babel
