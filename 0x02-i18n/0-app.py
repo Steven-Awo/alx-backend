@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-""" Task 0-app.py module """
+""" 0-app module """
 from flask import Flask
-
 from routes.routes_0 import app_routes
 
 
