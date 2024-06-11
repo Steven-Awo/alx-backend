@@ -5,8 +5,8 @@ const queuee = createQueue({name: 'push_notification_code'});
 
 const job_to_create = queuee.create('push_notification_code', {
 
-  phoneNumber: '07045679939',
-  message: 'Account registered',
+  phoneNumber: '08117033382',
+  message: 'Account just registered',
 
 });
 
