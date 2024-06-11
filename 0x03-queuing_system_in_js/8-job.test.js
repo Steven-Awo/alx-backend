@@ -37,7 +37,7 @@ describe('createPushNotificationsJobs', () => {
 
     expect(
       createPushNotificationsJobs.bind(createPushNotificationsJobs, {}, queuees)
-    ).to.throw('Jobs is actually not in the array');
+    ).to.throw('Jobs is not an array');
 
   });
 
